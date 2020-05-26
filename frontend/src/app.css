@@ -1,42 +1,94 @@
-*{
+:root {
+    --Cachorro--color: #964b0080;
+    --Gato--color: #33333390;
+    --Empate--color: #008CBA90;
+
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: grid;
     align-items: center;
     justify-content: center;
-
     font-family: sans-serif;
     height: 100vh;
     background-color: #eee;
 }
 
-.title{
+.title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #555;
-    margin-bottom: 2rem;
+    margin-top: 0px;
+    margin-bottom: 1rem;
 }
 
-.board{ 
+.board {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.cell{
+.board.game-over {
+    opacity: 0.6;
+}
+
+.cell {
     display: grid;
     align-items: center;
     justify-content: center;
-
     background-color: #fff;
     border-radius: 1rem;
     font-weight: bold;
     color: #00000066;
-
     cursor: pointer;
 }
+
+.Cachorro {
+    background-image: url(./assets/dog.png);
+    background-color: var(--Cachorro--color);
+}
+
+.Gato {
+    background-image: url(./assets/cat.png);
+    background-color: var(--Gato--color);
+}
+
+.Gato, .Cachorro, .game-over .cell {
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+}
+
+.player-message {
+    margin: 2ren;
+}
+
+.player-message span.vCachorro {
+    color: var(--Cachorro--color);
+}
+
+.player-message span.vGato {
+    color: var(--Gato--color);
+}
+
+button {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 10px;
+  }
