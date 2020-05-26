@@ -1,9 +1,12 @@
 import React from 'react';
-
+import Game from './components/Game'
+import './app.css'
 
 function App() {
   return (
-    <div> TIC TAC TOE</div>
+    <div>
+      <Game></Game>
+    </div>
   );
 }
 
