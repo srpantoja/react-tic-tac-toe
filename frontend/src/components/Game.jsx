@@ -58,7 +58,7 @@ export default function Game() {
     const resetar_jogo = () => {
         if (vencedor)
             setJogadoratual(vencedor)
-        if (!vencedor)
+        if (!vencedor && vencedor === 'Empate')
             setJogadoratual('Gato')
 
         setTabuleiro(tabuleiro_vazio)
