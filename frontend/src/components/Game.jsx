@@ -90,9 +90,18 @@ export default function Game() {
                 {
                     vencedor
                     &&
-                    <h2 className='player-message'>
-                        <span className={`v${vencedor}`}> {vencedor}</span> Venceu!
-                    </h2>
+                    <div>
+                        {
+                            vencedor === "Empate" ?
+                                <h2 className='player-message'>
+                                    <span className={`${vencedor}`}> Empatou!</span>
+                                </h2>
+                                :
+                                <h2 className='player-message'>
+                                    <span className={`v${vencedor}`}> {vencedor}</span> Venceu!
+                                </h2>
+                        }
+                    </div>
                     ||
                     <h2 className='player-message'>
                         O<span className={`v${jogadoratual}`}> {jogadoratual} </span>Joga!

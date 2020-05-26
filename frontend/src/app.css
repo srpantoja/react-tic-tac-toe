@@ -81,6 +81,10 @@ footer {
     color: var(--Gato--color);
 }
 
+.player-message span.Empate{
+    color: var(--Empate--color);
+}
+
 button {
     background-color: #008CBA; /* Green */
     border: none;
